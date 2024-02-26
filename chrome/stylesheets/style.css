@@ -1,0 +1,31 @@
+.__ph__pattern-detected {
+    border: 2px solid rgb(252, 0, 0) !important;
+}
+
+.__ph__current-pattern {
+    z-index: 10000 !important;
+    box-shadow: 0 0 0 25px rgb(2, 252, 73);
+    animation: __ph__highlight 8s;
+    opacity: 0;
+    position: relative; /* Add this to position the pseudo-element relative to this element */
+}
+
+.__ph__current-pattern::before {
+    content: "⬇️";
+    position: absolute;
+    top: -50px; /* Adjust as needed */
+    left: 50%; /* Center the symbol */
+    font-size: 30px;
+    transform: translateX(-50%); /* Center the symbol */
+}
+
+
+@keyframes __ph__highlight {
+    from {
+        opacity: 0.75;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

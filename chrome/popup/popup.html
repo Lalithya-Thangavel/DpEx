@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .toolbar{
+            margin: 0;
+            padding: 7px;
+            background:#B3C6FA26;
+            font-size: 2em;
+            color:#F0F0F2;
+        }
+        .toolRibbon{
+            margin: 0;
+            padding: 10px;
+            background:#B3C6FA26;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-auto-flow: column;
+            grid-template: auto / repeat(4, 1fr);
+            justify-items: center;
+            white-space: normal;
+        }
+    
+    
+
+        :root {
+            --fill-color: rgb(0, 0, 0);
+        }
+
+        body {
+            margin: 0;
+            width: 300px;
+            text-align: center;
+            font-size: 0.85em;
+        }
+
+        i {
+            font-size: 60px;
+            color: rgb(81, 225, 177);
+        }
+
+        i:active, i:hover, i.active {
+            color: blue;
+        }
+
+        path {
+            stroke: rgb(251, 251, 251);
+            stroke-width: 10;
+            fill: var(--fill-color);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: white;
+                background: #1b1b23;
+            }
+        }
+        j,k,z,h {
+            font-size: 30px;
+            color: rgb(217, 231, 224);
+        }
+        k.active{
+            color:rgb(217, 49, 11);
+        }
+
+    </style>
+    <script type="module" src="popup.js"></script>
+</head>
+
+<body>
+    <div id="basicTools" class="toolbar">
+        <span>𝗗𝗽𝗘𝘅</span>
+    </div>
+    <i class='bx bx-power-off' id="power-btn"></i>    
+    <extension-popup></extension-popup>
+    <!-- Add the buttons inside a container -->
+    <div class="toolRibbon">
+        <k class='bx bx-block' id="block-btn" title="Remove dark patterns"></k>
+        <h class='bx bx-rupee' id="rupee-btn" title="View past price"></h>
+        <j class='bx bxs-report' id="report-btn" title="Report a bug"></j>
+        <z class='bx bx-info-circle' id="info-btn" title="About the extension"></z>
+    </div>
+</body>
+
+</html>
+
+
+
+  
